@@ -1,4 +1,4 @@
-###### First program will read 
+### First program python_show_img.py will read 
 ```bash
 00000001_000.png 
 ```

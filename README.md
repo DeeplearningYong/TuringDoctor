@@ -4,7 +4,7 @@
 ```
 from images folder and show original image, then show a rectangular area of 
 ```bash
-[xmin=300, ymin=200] with width 100, height 200 
+[x=300, y=200] with width 100, height 200 
 ```
 ![alt text](http://math.hws.edu/eck/cs124/javanotes6/c6/gui_coordinates.png)
 ```bash

@@ -9,6 +9,7 @@ if __name__ == '__main__' :
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--image", required=True, help="Path to the image")
     args = vars(ap.parse_args())
+    imgname = args["image"].split('/')[1].split('.')[0]
 	
     #pdb.set_trace() 
     im = cv2.imread(args["image"])
@@ -30,10 +31,10 @@ if __name__ == '__main__' :
     cv2.waitKey(0)
 
     var = raw_input("Please enter name of the region: ")
-    imgcropname = var+'.png'
+    imgcropname = imgname+'_'+var+'.png'
     cv2.imwrite(imgcropname,imCrop)
 
-    txtoutname = var+ '.txt'
+    txtoutname = imgname+'_'+var+ '.txt'
     bboxfile = open(txtoutname,'w')
     
     #pdb.set_trace()

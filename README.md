@@ -32,6 +32,15 @@ then write cropped region into a image file and txt file
 ```bash
 python python_show_crop.py --image images/00000001_000.png
 ```
+with output:
+```bash
+python python_show_crop.py --image images/00000001_000.png
+Select a ROI and then press SPACE or ENTER button!
+Cancel the selection process by pressing c button!
+Please enter name of the region: disease1
+```
+and you will find 00000001_000_disease1.png and 00000001_000_disease1.txt in your current working folder. you can modify the save path to other places. 
+You can create several outputs so you can use it in the next step. 
 
 ### (4) Doctor can use any program to cut the interested region from the image,
 ###### e.g., use Preview on MAC, then name the cutted image as original name plus some disease type

@@ -1,25 +1,37 @@
 import cv2
 import numpy as np
+import argparse
 import pdb
 
 
 pdb.set_trace()
 
-img = cv2.imread('/Users/davidli/TuringDoctor/images/00000001_000.png',0)
-cv2.rectangle(img, (100,100), (300,300), (0,0,255),3)
+ap = argparse.ArgumentParser()
+ap.add_argument("-o", "--origin", required=True, help="Path to the original image")
+ap.add_argument("-p", "--patch", required=True, help="Path to the patch image")
+args = vars(ap.parse_args())
+originpath = args["origin"]
+patchpath = args["patch"]
+ 
+# all channel for displaying purpose
+parent = cv2.imread(originpath)
+child = cv2.imread(patchpath)
 
-cv2.imshow('ROI',img)
-cv2.waitKey(0)
+# only read one channel for matching 
+img = cv2.imread(originpath,0)
 
-img2 = img.copy()
-template = cv2.imread('disease1.png',0)
+imgbackup = img.copy()
+template = cv2.imread(patchpath,0)
 w, h = template.shape[::-1]
 
 # All the 6 methods for comparison in a list
+print 'Will use 4 methods to find matches...'
 methods = ['cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+font = cv2.FONT_HERSHEY_SIMPLEX
 
 for meth in methods:
-    img = img2.copy()
+    tmpparent = parent.copy()
+    img = imgbackup.copy()
     method = eval(meth)
 
     # Apply template Matching
@@ -32,17 +44,19 @@ for meth in methods:
     else:
         top_left = max_loc
     bottom_right = (top_left[0] + w, top_left[1] + h)
-    
-    pdb.set_trace()
-    cv2.rectangle(img,top_left, bottom_right, (0,255,255), 2)
-    cv2.imshow('ROI',img)
+
+    #calculate difference: top_left=(xmin,ymin) | bottom_right=(xmax,ymax)
+
+    matched = parent[top_left[1]:(bottom_right[1]), top_left[0]:(bottom_right[0]) ]
+    difference = sum(sum(sum(matched-child)))
+    if difference != 0:
+       print 'not exact match with'+' '+meth+' '+'pixel diff:'+ str(difference)
+    else:
+       print 'exact match found with'+' '+meth
+
+    cv2.rectangle(tmpparent,top_left, bottom_right, (0,0,255), 2)
+    cv2.putText(tmpparent,meth, (top_left[0]-10, top_left[1]-10), font, 1,(0,255,0),1,cv2.LINE_AA)
+    cv2.imshow('ROI',tmpparent)
     cv2.waitKey(0)	
 
-    #plt.subplot(121),plt.imshow(res)
-    #plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-    #plt.subplot(122),plt.imshow(img)
-    #plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
-    #plt.suptitle(meth)
-
-    #plt.show()
-
+cv2.destroyAllWindows()

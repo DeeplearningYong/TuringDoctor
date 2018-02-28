@@ -20,3 +20,5 @@ and read coresponding image and plot given bounding box
 python python_show_box.py
 ```
 
+### Third program allows you to select a bounding box from the image and output coordinates
+

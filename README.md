@@ -48,3 +48,12 @@ exact match found with cv2.TM_SQDIFF
 exact match found with cv2.TM_SQDIFF_NORMED
 ```
 or 
+```bash
+python python_show_match.py --origin images/00000001_000.png --patch 00000001_001_disease2.png
+Will use 4 methods to find matches...
+not exact match with cv2.TM_CCOEFF_NORMED pixel diff:642
+not exact match with cv2.TM_CCORR_NORMED pixel diff:102
+not exact match with cv2.TM_SQDIFF pixel diff:486
+not exact match with cv2.TM_SQDIFF_NORMED pixel diff:102
+```
+when not exact matches was found. 

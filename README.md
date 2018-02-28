@@ -1,4 +1,4 @@
-### First program python_show_img.py will read 
+### (1) First program python_show_img.py will read 
 ```bash
 00000001_000.png 
 ```
@@ -11,7 +11,7 @@ from images folder and show original image, then show a rectangular area of
 python python_show_img.py 00000001_000 100 200 300 400
 ```
 
-### Second program will pick one line from 
+### (2) Second program will pick one line from 
 ```bash
 BBox_List_2017.csv 
 ```
@@ -20,7 +20,7 @@ and read coresponding image and plot given bounding box
 python python_show_box.py
 ```
 
-### Third program allows you to select a 
+### (3) Third program allows you to select a 
 ```bash
 bounding box 
 ```

@@ -11,7 +11,7 @@ from images folder and show original image, then show a rectangular area of
 python python_show_img.py 00000001_000 100 200 300 400
 ```
 
-### Second program:
+### Second program will pick one line from BBox_List_2017.csv and read coresponding image and plot given bounding box
 ```bash
 python python_show_box.py
 ```

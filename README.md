@@ -20,5 +20,7 @@ and read coresponding image and plot given bounding box
 python python_show_box.py
 ```
 
-### Third program allows you to select a bounding box from the image and output coordinates
-
+### Third program allows you to select a bounding box from the image, then ask you for region name, then write cropped region into a image file and txt file
+```bash
+python python_show_crop.py --image images/00000001_000.png
+```

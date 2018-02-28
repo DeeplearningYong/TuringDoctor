@@ -33,7 +33,8 @@ then write cropped region into a image file and txt file
 python python_show_crop.py --image images/00000001_000.png
 ```
 
-### (4) Doctor can use any program to cut the interested region from the image, e.g., use Preview on MAC, then name the cutted image as original name plus some disease type
+### (4) Doctor can use any program to cut the interested region from the image,
+###### e.g., use Preview on MAC, then name the cutted image as original name plus some disease type
 this program can be used to find where it was cutted:
 ```bash
 # --o gives the origin image, --p gives the image you want to find whether it was cutted from origin image or not
@@ -49,7 +50,7 @@ exact match found with cv2.TM_SQDIFF_NORMED
 ```
 or 
 ```bash
-python python_show_match.py --origin images/00000001_000.png --patch 00000001_001_disease2.png
+python python_show_match.py --o images/00000001_000.png --p 00000001_001_disease2.png
 Will use 4 methods to find matches...
 not exact match with cv2.TM_CCOEFF_NORMED pixel diff:642
 not exact match with cv2.TM_CCORR_NORMED pixel diff:102

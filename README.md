@@ -32,3 +32,19 @@ then write cropped region into a image file and txt file
 ```bash
 python python_show_crop.py --image images/00000001_000.png
 ```
+
+### (4) Doctor can use any program to cut the interested region from the image, e.g., use Preview on MAC, then name the cutted image as original name plus some disease type
+this program can be used to find where it was cutted:
+```bash
+# --o gives the origin image, --p gives the image you want to find whether it was cutted from origin image or not
+python python_show_match.py --o images/00000001_000.png --p 00000001_000_disease1.png
+```
+You will observer output as following if matches is found:
+```bash
+Will use 4 methods to find matches...
+exact match found with cv2.TM_CCOEFF_NORMED
+exact match found with cv2.TM_CCORR_NORMED
+exact match found with cv2.TM_SQDIFF
+exact match found with cv2.TM_SQDIFF_NORMED
+```
+or 

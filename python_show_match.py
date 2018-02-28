@@ -4,7 +4,7 @@ import argparse
 import pdb
 
 
-pdb.set_trace()
+#pdb.set_trace()
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-o", "--origin", required=True, help="Path to the original image")

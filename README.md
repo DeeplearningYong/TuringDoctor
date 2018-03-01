@@ -1,13 +1,13 @@
 ### Turing-AI-Doctor Tasks:
-1.a) label bounding boxes for 110k images <\br>
-1.b) 1st model => image => no findings or have findings
----Alexnet
----VGGnet
----Resnet
-2) 2nd model => image => no findings or some diseases from 14 category
-3) 3rd model => image => bounding box with diagnosis 
----SSD
----Faster R-CNN|Mask R-CNN
+1.a) label bounding boxes for 110k images <br />
+1.b) 1st model => image => no findings or have findings <br />
+---Alexnet <br />
+---VGGnet <br />
+---Resnet <br />
+2) 2nd model => image => no findings or some diseases from 14 category <br />
+3) 3rd model => image => bounding box with diagnosis  <br />
+---SSD <br />
+---Faster R-CNN|Mask R-CNN <br />
 
 ### (1) First program python_show_img.py will read 
 ```bash

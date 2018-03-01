@@ -1,5 +1,5 @@
 ### Turing-AI-Doctor Tasks:
-1.a) label bounding boxes for 110k images
+1.a) label bounding boxes for 110k images <\br>
 1.b) 1st model => image => no findings or have findings
 ---Alexnet
 ---VGGnet

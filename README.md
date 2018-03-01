@@ -1,3 +1,10 @@
+### ToDo Tasks:
+1) label bounding boxes for 110k images
+2) 1st model => image => no findings or have findings
+3) 2nd model => image => no findings or some diseases from 14 category
+4) 3rd model => image => bounding box with diagnosis 
+
+
 ### (1) First program python_show_img.py will read 
 ```bash
 00000001_000.png 

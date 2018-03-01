@@ -1,4 +1,4 @@
-### ToDo Tasks:
+### Turing-AI-Doctor Tasks:
 1) label bounding boxes for 110k images
 2) 1st model => image => no findings or have findings
 3) 2nd model => image => no findings or some diseases from 14 category

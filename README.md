@@ -1,6 +1,6 @@
 ### Turing-AI-Doctor Tasks:
 1.a) label bounding boxes for 110k images |Mar 1st <br />
-1.b) Boost dogcat model accuracy to 98% with newer models  
+1.b) Boost dogcat model accuracy with newer models  
 1st model => image => no findings or have findings |Mar 1st <br />
 ---Alexnet <br />
 ---VGGnet <br />

@@ -1,5 +1,6 @@
 ### Turing-AI-Doctor Tasks:
-* add support to ball matching 
+* add support to ball matching, 3/22/2018  <br />
+
 1.a) label bounding boxes for 110k images |Mar 1st <br />
 1.b) Boost dogcat model accuracy with newer models  
 1st model => image => no findings or have findings |Mar 1st <br />
